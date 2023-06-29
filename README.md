@@ -1,1 +1,1 @@
-The repository for the charge mismeasurement project 
+The repository for the charge mismeasurement project @ CMS
