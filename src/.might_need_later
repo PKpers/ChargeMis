@@ -1,0 +1,59 @@
+ROOT.gInterpreter.Declare('''
+bool Filter_GetRecoDilepton(const ROOT::VecOps::RVec<int>& dilepton, int flavor) {
+    bool result = true;
+    for (int d : dilepton) {
+        if (d != flavor) {
+            result = false;
+            break;
+        }
+    }
+    return result;
+}
+
+bool Filter_GetGenDilepton(const ROOT::VecOps::RVec<int>& evnt_ids, int PDGId) {
+    Int_t lep_p = 0; // number of anti leptons in each event
+    Int_t lep_n = 0; // number of leptons in each event
+    Int_t lep_p_idx = -1; // index of the anti lepton
+    Int_t lep_n_idx = -1; // index of the lepton
+
+    for (Int_t idx = 0; idx < evnt_ids.size(); ++idx) {
+        Int_t id_ = evnt_ids[idx];
+        if (id_ == PDGId) {
+            lep_p += 1; // count the anti leptons
+            lep_p_idx = idx; // update the index if an event is dilepton then this index will not be updated
+        }
+        else if (id_ == -PDGId) {
+            lep_n += 1; // count the leptons
+            lep_n_idx = idx; // update the index if an event is dilepton then this index will not be updated
+        }
+    }
+
+    if (lep_p == 1 && lep_n == 1) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+''')
+
+df = ROOT.RDataFrame(treeName, inFile)
+print(df.Count().GetValue())
+muonsReco = df.Filter("Filter_GetRecoDilepton(LightLepton_Flavor, 2)")#.Snapshot("tree", outPath+outFileMuons+".root") 
+print(muonsReco.Count().GetValue())
+#muonsReco = ROOT.RDataFrame("tree", outPath+outFileMuons+".root")
+muonsReco = muonsReco.Filter("Filter_GetGenDilepton(GenPart_PDGId, 13)")
+print(muonsReco.Count().GetValue())
+exit()
+
+# Snapshot
+# Check if the remaining gen level events are dimuon
+# if not make a function that loops over every event and does whatever if the gen level event is a dimuon
+# if yes then write a function that does whatever.
+# Do the same for the electrons
+
+electronsReco = df.Filter("getDilepton(LightLepton_Flavor, 1)")
+
+#muonsGen.Display({"GenPart_PDGId"}).Print()
+#muons = df.Filter("GenPart_PDGId")

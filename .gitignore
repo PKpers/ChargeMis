@@ -1,0 +1,4 @@
+*.root
+.paths
+etc/.paths
+my_env/*
