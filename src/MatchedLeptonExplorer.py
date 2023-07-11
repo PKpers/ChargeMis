@@ -1,110 +1,18 @@
 import ROOT
+from os import chdir, getcwd
+import sys
+sys.path.insert(0, '/home/kpapad/charge_mis/lib')
+from pyrplot import set_axes_title, set_axes_range, add_Header, create_legend
+
+## Include my C libs 
+workingDIR = getcwd()
+chdir('/home/kpapad/charge_mis/lib/')
+ROOT.gInterpreter.ProcessLine('#include "funcy.h"')
+chdir(workingDIR)
+
+## Some general plot settings
 ROOT.gROOT.SetBatch(True)
 ROOT.gStyle.SetOptStat(0); ROOT.gStyle.SetTextFont(42)
-
-## Declare some helper functions
-# They will be added to a C header file latter on. 
-
-ROOT.gInterpreter.Declare('''
-
-using namespace ROOT::VecOps;
-using namespace std;
-
-bool Filter_GetRecoDilepton(const RVec<int>& dilepton, int flavor) {
-    bool result = true;
-    for (int d : dilepton) {
-        if (d != flavor) {
-            result = false;
-            break;
-        }
-    }
-    return result;
-}
-
-bool Filter_GetGenDilepton(const RVec<int>& evnt_ids, int PDGId) {
-    Int_t lep_p = 0; // number of anti leptons in each event
-    Int_t lep_n = 0; // number of leptons in each event
-    Int_t lep_p_idx = -1; // index of the anti lepton
-    Int_t lep_n_idx = -1; // index of the lepton
-
-    for (Int_t idx = 0; idx < evnt_ids.size(); ++idx) {
-        Int_t id_ = evnt_ids[idx];
-        if (id_ == PDGId) {
-            lep_p += 1; // count the anti leptons
-            lep_p_idx = idx; // update the index. If an event is dilepton then this index will not be updated
-        }
-        else if (id_ == -PDGId) {
-            lep_n += 1; // count the leptons
-            lep_n_idx = idx; // update the index. If an event is dilepton then this index will not be updated
-        }
-    }
-
-    if (lep_p == 1 && lep_n == 1) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-
-RVec<int> MapCharge(const RVec<int>& event_ids, RVec<int>& interest_ids) {
-    map<int, int> charge;
-    charge[13] = -1;   // charge of a muon
-    charge[-13] = +1;  // charge of an anti muon
-    charge[11] = -1;   // charge of an electron
-    charge[-11] = +1;  // charge of an anti electron
-    
-    Int_t index1 = interest_ids[0]; // Get the index of the first gen lepton 
-    Int_t index2 = interest_ids[1]; // Get the index of the second gen lepton
-
-    // Using the above indices, get the flavor of the leptons
-    Int_t PDGId1 = event_ids[index1];
-    Int_t PDGId2 = event_ids[index2];
-    
-    // Map the leptons to their charge
-    Int_t mappedCharge1 = charge[PDGId1];
-    Int_t mappedCharge2 = charge[PDGId2];
-
-    return RVec<int>({mappedCharge1, mappedCharge2});
-}
-
-using Vec_t = const RVec<float>;
-
-float ComputeInvariantMass(Vec_t& pt, Vec_t& eta, Vec_t& phi, Vec_t& index){
-    Int_t id1 = index[0]; // the index of the first gen lepton
-    Int_t id2 = index[1]; // the index of the second gen lepton
-
-    ROOT::Math::PtEtaPhiMVector p1(pt[id1], eta[id1], phi[id1], 0);
-    ROOT::Math::PtEtaPhiMVector p2(pt[id2], eta[id2], phi[id2], 0);
-    return (p1 + p2).M();
-}
-''')
-
-def set_axes_range(pltObj, Xrange, Yrange):
-    if not Yrange : # Allow the possiblity to modify the range of only one axis
-        pltObj.GetXaxis().SetRangeUser(Xrange[0], Xrange[1])
-        return
-    elif not Xrange :
-        pltObj.GetYaxis().SetRangeUser(Yrange[0], Yrange[1])
-        return
-    else:
-        pltObj.GetXaxis().SetRangeUser(Xrange[0], Xrange[1])
-        pltObj.GetYaxis().SetRangeUser(Yrange[0], Yrange[1])
-        return
-#
-
-def add_Header(title):
-    label = ROOT.TLatex()
-    label.SetTextSize(0.04)
-    label.DrawLatexNDC(0.18, 0.92, "#bf{"+str(title)+"}")
-    return
-#
-
-def set_axes_title(pltObj, xtitle, ytitle):
-    pltObj.GetXaxis().SetTitle(str(xtitle))
-    pltObj.GetYaxis().SetTitle(str(ytitle))
-    return
-#
 
 
 ## Input configuration
@@ -168,13 +76,12 @@ muonsProdSub_Hist.SetLineColor(3)
 muonsProdSub_Hist.SetLineStyle(2)
 muonsProdSub_Hist.Draw("same")
 
-legend = ROOT.TLegend(0.35, 0.72, 0.45, 0.85)
-legend.AddEntry(muonsProdLeading_Hist.GetValue(), "Leading muon", "l")
-legend.AddEntry(muonsProdSub_Hist.GetValue(), "Subleading muon", "l")
-legend.SetFillColor(0)
-legend.SetBorderSize(0)
-legend.SetTextSize(0.03)
-legend.Draw("same")
+muonsProdHist_entries = {
+    muonsProdLeading_Hist.GetValue(): ("Leading muon", "l"),
+    muonsProdSub_Hist.GetValue(): ("Subleading muon", "l")
+}
+legend = create_legend((0.35, 0.72, 0.45, 0.85), muonsProdHist_entries)
+legend.Draw('same')
 
 label = ROOT.TLatex()
 label.SetTextSize(0.03)
@@ -260,12 +167,11 @@ electronsProdSub_Hist.SetLineStyle(2)
 electronsProdSub_Hist.Draw("same")
 
 # Plot the legend
-legend = ROOT.TLegend(0.35, 0.72, 0.45, 0.85)
-legend.AddEntry(electronsProdLeading_Hist.GetValue(), "Leading electron", "l")
-legend.AddEntry(electronsProdSub_Hist.GetValue(), "Subleading electron", "l")
-legend.SetFillColor(0)
-legend.SetBorderSize(0)
-legend.SetTextSize(0.03)
+electronsProdHist_entries = {
+    electronsProdLeading_Hist.GetValue(): ("Leading electron", "l"),
+    electronsProdSub_Hist.GetValue(): ("Subleading electron", "l")
+}
+legend = create_legend((0.35, 0.72, 0.45, 0.85), electronsProdHist_entries)
 legend.Draw("same")
 
 label = ROOT.TLatex()
@@ -293,12 +199,11 @@ electronsProdSubFliped_Hist.SetLineStyle(2)
 electronsProdSubFliped_Hist.Draw("same")
 
 # Plot the legend  
-legend = ROOT.TLegend(0.4, 0.72, 0.45, 0.85)
-legend.AddEntry(electronsProdLeadingFliped_Hist.GetValue(), "Leading electron", "l")
-legend.AddEntry(electronsProdSubFliped_Hist.GetValue(), "Subleading electron", "l")
-legend.SetFillColor(0)
-legend.SetBorderSize(0)
-legend.SetTextSize(0.03)
+electronsPtodFlipedHist_entries = {
+    electronsProdLeadingFliped_Hist.GetValue(): ("Leading electron", "l"),
+    electronsProdSubFliped_Hist.GetValue(): ("Subleading electron", "l")
+}
+legend = create_legend((0.4, 0.72, 0.45, 0.85), electronsProdHist_entries)
 legend.Draw("same")
 
 label = ROOT.TLatex()
@@ -329,12 +234,11 @@ genDielectronCharge_Hist.SetLineStyle(2)
 recoDielectronCharge_Hist.Draw()
 genDielectronCharge_Hist.Draw('same')
 
-legend = ROOT.TLegend(0.33, 0.72, 0.45, 0.85)
-legend.AddEntry(recoDielectronCharge_Hist.GetValue(), "reco events", "l")
-legend.AddEntry(genDielectronCharge_Hist.GetValue(), "gen events", "l")
-legend.SetFillColor(0)
-legend.SetBorderSize(0)
-legend.SetTextSize(0.03)
+dielectronChargeHist_entries = {
+    recoDielectronCharge_Hist.GetValue(): ("reco events", "l"),
+    genDielectronCharge_Hist.GetValue(): ("gen events", "l")
+}
+legend = create_legend((0.33, 0.72, 0.45, 0.85), dielectronChargeHist_entries)
 legend.Draw("same")
 
 c.SaveAs(outFileElectrons)
