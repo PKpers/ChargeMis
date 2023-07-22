@@ -16,22 +16,27 @@ ROOT.gStyle.SetOptStat(0); ROOT.gStyle.SetTextFont(42)
 
 
 ## Input configuration
-inPath = "/cms/multilepton-4/jvora/ULnano/Skims/05Apr23/MC/2LOS_Skim_medium_2018/"
-inFileName="Snapshot_DY_1of8.root"
-inFile = inPath + inFileName
+#inPath = "/cms/multilepton-4/jvora/ULnano/Skims/05Apr23/MC/2LOS_Skim_medium_2018/"
+#inFileName="Snapshot_DY_2LSS.root"
+#inFile = inPath + inFileName
+# Same sign MC
+inFile = "/cms/multilepton-4/jvora/ULnano/Skims/12Jul23/MC/2LSS_Skim_medium_2018/Snapshot_DY.root"
 
 treeName = "skimTree"
-df = ROOT.RDataFrame(treeName, inFile)#.Range(10)
+df = ROOT.RDataFrame(treeName, inFile)#.Range(100)
 
 ## Output configuration
-outPath = "/home/kpapad/charge_mis/out/plots/"
-outNameMuons = "DY_1of8_Muons_FlipHist.pdf"
-outNameElectrons = "DY_1of8_Electrons_FlipHist.pdf"
+outPath = "/cms/multilepton-2/kpapad/charge_mis/out/plots/"
+outNameMuons = "DY_2LSS_Muons_FlipHist.pdf"# 2 Leptons Same sign
+outNameElectrons = "DY_2LSS_Electrons_FlipHist.pdf"
 outFileMuons, outFileElectrons = [outPath + name for name in (outNameMuons, outNameElectrons)] 
 
 ## Begin with muons --------------------------------------------------------------------------------------------------------
+id_ = ROOT.RVec("int")([0, 1])
 muons = df.Filter("Filter_GetRecoDilepton(LightLepton_Flavor, 2)") \
     .Define("GenLepton_InvMass", "ComputeInvariantMass(GenPart_Pt, GenPart_Eta, GenPart_Phi, LightLepton_GenPartIndex)") \
+    .Define("LightLepton_Idx", "RVec<int>{0, 1}") \
+    .Define("LightLepton_InvMass", "ComputeInvariantMass(LightLepton_Pt, LightLepton_Eta, LightLepton_Phi, LightLepton_Idx)")\
     .Define("GenLepton_Charge", "MapCharge(GenPart_PDGId, LightLepton_GenPartIndex)") \
     .Define("GenTimesLight_Charge", "LightLepton_Charge*GenLepton_Charge") \
     .Define("GenTimesLight_ChLeading", "GenTimesLight_Charge[0]") \
@@ -66,6 +71,13 @@ genMuonsMass.Draw()
 add_Header("gen muons mass")
 c.SaveAs(outFileMuons)
 
+#Plot the invariant mass of the light lepton pair as well
+LightMuonsMass = muons.Histo1D( ("LightMuonsMass", "", 50, 50, 300), "LightLepton_InvMass")
+set_axes_title(LightMuonsMass, "M_ll", "counts")
+LightMuonsMass.Draw()
+add_Header("light muons mass")
+c.SaveAs(outFileMuons)
+
 muonsProdLeading_Hist = muons.Histo1D( ("muonsProdLeading_Hist", "", 50, -2, 2), "GenTimesLight_ChLeading" )
 set_axes_title(muonsProdLeading_Hist, "gen charge x reco charge", "counts")
 muonsProdLeading_Hist.SetLineColor(1)
@@ -77,8 +89,8 @@ muonsProdSub_Hist.SetLineStyle(2)
 muonsProdSub_Hist.Draw("same")
 
 muonsProdHist_entries = {
-    muonsProdLeading_Hist.GetValue(): ("Leading muon", "l"),
-    muonsProdSub_Hist.GetValue(): ("Subleading muon", "l")
+    muonsProdLeading_Hist.GetValue(): ("Leading muon ss", "l"),
+    muonsProdSub_Hist.GetValue(): ("Subleading muon ss", "l")
 }
 legend = create_legend((0.35, 0.72, 0.45, 0.85), muonsProdHist_entries)
 legend.Draw('same')
@@ -91,14 +103,15 @@ c.SaveAs(outFileMuons)
 
 # Some events apparently have muons with registered charge = 0
 # Save them for further investigation 
-weirdEvents = muons.Filter("Any(GenTimesLight_Charge == 0)")\
-    .Snapshot("tree","/home/kpapad/charge_mis/out/data/DY_1of8_WrdMuons.root")
+#weirdEvents = muons.Filter("Any(GenTimesLight_Charge == 0)")\
+#    .Snapshot("tree","/home/kpapad/charge_mis/out/data/DY_2LSS_WrdMuons.root")
 
 ## Another way of estimating the charge flip ratio 
 # is to examine the total charge of the ll pair.
 # The DY dimuons are charge neutral and thus in case of a flip, the total charge will be != 0. 
 
-dimuonFlipped = muons.Filter("LightLepton_ChargeSum != 0")
+'''
+dimuonFlipped = muons.Filter("LightLepton_ChargeSum != 2 || LightLepton_ChargeSum != -2 |")
 dimuonFlipped_count = dimuonFlipped.Count().GetValue()
 dimuonFlippRatio = dimuonFlipped_count / numMuons
 print("the estimated rate of charge flip for muons is: ",dimuonFlippRatio)
@@ -115,12 +128,14 @@ label.SetTextSize(0.03)
 label.DrawLatexNDC(0.25, 0.68, "charge flip events: {}".format(dimuonFlipped_count))
 
 c.SaveAs(outFileMuons)
-
+'''
 c.SaveAs(outFileMuons+"]")
 
 ## Continue with electrons --------------------------------------------------------------------------------------------------------
 electrons = df.Filter("Filter_GetRecoDilepton(LightLepton_Flavor, 1)") \
     .Define("GenLepton_InvMass", "ComputeInvariantMass(GenPart_Pt, GenPart_Eta, GenPart_Phi, LightLepton_GenPartIndex)") \
+    .Define("LightLepton_Idx", "RVec<int>{0, 1}") \
+    .Define("LightLepton_InvMass", "ComputeInvariantMass(LightLepton_Pt, LightLepton_Eta, LightLepton_Phi, LightLepton_Idx)")\
     .Define("GenLepton_Charge", "MapCharge(GenPart_PDGId, LightLepton_GenPartIndex)") \
     .Define("GenTimesLight_Charge", "LightLepton_Charge*GenLepton_Charge") \
     .Define("GenTimesLight_ChLeading", "GenTimesLight_Charge[0]") \
@@ -153,6 +168,12 @@ genElectronsMass.Draw()
 add_Header("gen electrons mass")
 c.SaveAs(outFileElectrons)
 
+LightElectronsMass = electrons.Histo1D( ("LightElectronsMass", "", 50, 50, 300), "LightLepton_InvMass")
+set_axes_title(LightElectronsMass, "M_ll", "counts")
+LightElectronsMass.Draw()
+add_Header("light electrons mass")
+c.SaveAs(outFileElectrons)
+
 #c.SetLogy(0)
 electronsProdLeading_Hist = electrons.Histo1D( ("electronsProdLeading_Hist", "", 50, -2, 2), "GenTimesLight_ChLeading" )
 
@@ -168,8 +189,8 @@ electronsProdSub_Hist.Draw("same")
 
 # Plot the legend
 electronsProdHist_entries = {
-    electronsProdLeading_Hist.GetValue(): ("Leading electron", "l"),
-    electronsProdSub_Hist.GetValue(): ("Subleading electron", "l")
+    electronsProdLeading_Hist.GetValue(): ("Leading electron ss", "l"),
+    electronsProdSub_Hist.GetValue(): ("Subleading electron ss", "l")
 }
 legend = create_legend((0.35, 0.72, 0.45, 0.85), electronsProdHist_entries)
 legend.Draw("same")
@@ -182,8 +203,8 @@ c.SaveAs(outFileElectrons)
 
 # Some events apparently have electrons with registered charge = 0
 # Save them for further investigation 
-weirdEvents = electrons.Filter("Any(GenTimesLight_Charge == 0)")\
-    .Snapshot("tree","/home/kpapad/charge_mis/out/data/DY_1of8_WrdElectrons.root")
+#weirdEvents = electrons.Filter("Any(GenTimesLight_Charge == 0)")\
+#    .Snapshot("tree","/home/kpapad/charge_mis/out/data/DY_2LSS_WrdElectrons.root")
 
 ## Plot separatelly the events with charge flip 
 electronsProdLeadingFliped_Hist = electronsProdFliped.Histo1D( ("electronsProdLeadingFliped_Hist", "", 50, -2, 2), "GenTimesLight_ChLeading" )
@@ -213,6 +234,7 @@ label.DrawLatexNDC(0.35, 0.87, "charge fliped events".format(electronsProdFliped
 c.SaveAs(outFileElectrons)
 
 # Examine the total charge of the ll pair.
+'''
 recoDielectronFlipped = electrons.Filter("LightLepton_ChargeSum != 0")
 recoDielectronFlipped_count = recoDielectronFlipped.Count().GetValue()
 recoDielectronFlippRatio = recoDielectronFlipped_count / numElectrons
@@ -242,7 +264,6 @@ legend = create_legend((0.33, 0.72, 0.45, 0.85), dielectronChargeHist_entries)
 legend.Draw("same")
 
 c.SaveAs(outFileElectrons)
-
 ## Focus on the gen charge flip events
 genDielectronFlipedMass_Hist = genDielectronFlipped.Histo1D( ("genDielectronFlipedMass_Hist", "", 50, -2, 300), "GenLepton_InvMass" )
 set_axes_title(genDielectronFlipedMass_Hist , "M_ll", "counts")
@@ -250,5 +271,6 @@ set_axes_title(genDielectronFlipedMass_Hist , "M_ll", "counts")
 genDielectronFlipedMass_Hist .Draw()
 add_Header("Charge flip gen events")
 c.SaveAs(outFileElectrons)
+'''
 
 c.SaveAs(outFileElectrons+"]")

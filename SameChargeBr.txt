@@ -1,0 +1,809 @@
+[0mroot [2] skimTree->Print([D[0m[38;5;83m[1m()
+[0m******************************************************************************
+*Tree    :skimTree  : skimTree                                               *
+*Entries :   795666 : Total =      2615279882 bytes  File  Size =  753053950 *
+*        :          : Tree compression factor =   3.47                       *
+******************************************************************************
+*Br    0 :AllJet_DeepCSVB : ROOT::VecOps::RVec<float>                        *
+*Entries :   795666 : Total  Size=   28137119 bytes  File Size  =   12383063 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   2.27     *
+*............................................................................*
+*Br    1 :AllJet_DeepFlavorB : ROOT::VecOps::RVec<float>                     *
+*Entries :   795666 : Total  Size=   28140176 bytes  File Size  =   14970897 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   1.88     *
+*............................................................................*
+*Br    2 :AllJet_DeepFlavorCvB : ROOT::VecOps::RVec<float>                   *
+*Entries :   795666 : Total  Size=   28142214 bytes  File Size  =   13819866 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   2.03     *
+*............................................................................*
+*Br    3 :AllJet_DeepFlavorCvL : ROOT::VecOps::RVec<float>                   *
+*Entries :   795666 : Total  Size=   28142214 bytes  File Size  =   14456962 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   1.95     *
+*............................................................................*
+*Br    4 :AllJet_DeepFlavorQG : ROOT::VecOps::RVec<float>                    *
+*Entries :   795666 : Total  Size=   28141195 bytes  File Size  =   14120880 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   1.99     *
+*............................................................................*
+*Br    5 :AllJet_Eta : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   28132024 bytes  File Size  =   16361930 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   1.72     *
+*............................................................................*
+*Br    6 :AllJet_HadronFlavour : ROOT::VecOps::RVec<int>                     *
+*Entries :   795666 : Total  Size=   28142214 bytes  File Size  =    3547605 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   7.93     *
+*............................................................................*
+*Br    7 :AllJet_MDeepJetBSF : ROOT::VecOps::RVec<float>                     *
+*Entries :   795666 : Total  Size=   28140176 bytes  File Size  =    3539061 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   7.95     *
+*............................................................................*
+*Br    8 :AllJet_MDeepJetBSFDown : ROOT::VecOps::RVec<float>                 *
+*Entries :   795666 : Total  Size=   28144252 bytes  File Size  =    3543058 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   7.94     *
+*............................................................................*
+*Br    9 :AllJet_MDeepJetBSFDown2018 : ROOT::VecOps::RVec<float>             *
+*Entries :   795666 : Total  Size=   28148328 bytes  File Size  =    3547087 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   7.93     *
+*............................................................................*
+*Br   10 :AllJet_MDeepJetBSFUp : ROOT::VecOps::RVec<float>                   *
+*Entries :   795666 : Total  Size=   28142214 bytes  File Size  =    3540848 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   7.94     *
+*............................................................................*
+*Br   11 :AllJet_MDeepJetBSFUp2018 : ROOT::VecOps::RVec<float>               *
+*Entries :   795666 : Total  Size=   28146290 bytes  File Size  =    3544880 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   7.93     *
+*............................................................................*
+*Br   12 :AllJet_N  : AllJet_N/i                                             *
+*Entries :   795666 : Total  Size=    3190406 bytes  File Size  =     648124 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   4.92     *
+*............................................................................*
+*Br   13 :AllJet_POGId : ROOT::VecOps::RVec<int>                             *
+*Entries :   795666 : Total  Size=   28134062 bytes  File Size  =    5973938 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   4.71     *
+*............................................................................*
+*Br   14 :AllJet_PUId : ROOT::VecOps::RVec<int>                              *
+*Entries :   795666 : Total  Size=   28133043 bytes  File Size  =    7217196 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   3.90     *
+*............................................................................*
+*Br   15 :AllJet_PUIdDisc : ROOT::VecOps::RVec<float>                        *
+*Entries :   795666 : Total  Size=   28137119 bytes  File Size  =   13893842 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   2.02     *
+*............................................................................*
+*Br   16 :AllJet_Phi : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   28132024 bytes  File Size  =   16291126 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   1.73     *
+*............................................................................*
+*Br   17 :AllJet_Pt : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   28131005 bytes  File Size  =   14096732 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   1.99     *
+*............................................................................*
+*Br   18 :AllJet_PtSDown : ROOT::VecOps::RVec<float>                         *
+*Entries :   795666 : Total  Size=   28136100 bytes  File Size  =   14125858 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   1.99     *
+*............................................................................*
+*Br   19 :AllJet_PtSUp : ROOT::VecOps::RVec<float>                           *
+*Entries :   795666 : Total  Size=   28134062 bytes  File Size  =   14123656 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   1.99     *
+*............................................................................*
+*Br   20 :AllJet_QGL : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   28132024 bytes  File Size  =   10973794 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   2.56     *
+*............................................................................*
+*Br   21 :AllJet_RF : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   28131005 bytes  File Size  =    3518145 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   7.99     *
+*............................................................................*
+*Br   22 :AllJet_RFDown : ROOT::VecOps::RVec<float>                          *
+*Entries :   795666 : Total  Size=   28135081 bytes  File Size  =    3522484 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   7.98     *
+*............................................................................*
+*Br   23 :AllJet_RFUp : ROOT::VecOps::RVec<float>                            *
+*Entries :   795666 : Total  Size=   28133043 bytes  File Size  =    3520441 *
+*Baskets :     1015 : Basket Size=      32000 bytes  Compression=   7.99     *
+*............................................................................*
+*Br   24 :AllSV_Charge : ROOT::VecOps::RVec<int>                             *
+*Entries :   795666 : Total  Size=   13551161 bytes  File Size  =    3375154 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   4.01     *
+*............................................................................*
+*Br   25 :AllSV_Chi2 : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   13550033 bytes  File Size  =    4372851 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   3.10     *
+*............................................................................*
+*Br   26 :AllSV_DL2D : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   13550033 bytes  File Size  =    4519035 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   3.00     *
+*............................................................................*
+*Br   27 :AllSV_DL3D : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   13550033 bytes  File Size  =    4525378 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   2.99     *
+*............................................................................*
+*Br   28 :AllSV_DLS2D : ROOT::VecOps::RVec<float>                            *
+*Entries :   795666 : Total  Size=   13550597 bytes  File Size  =    4443977 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   3.05     *
+*............................................................................*
+*Br   29 :AllSV_DLS3D : ROOT::VecOps::RVec<float>                            *
+*Entries :   795666 : Total  Size=   13550597 bytes  File Size  =    4442183 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   3.05     *
+*............................................................................*
+*Br   30 :AllSV_Eta : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   13549469 bytes  File Size  =    4702127 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   2.88     *
+*............................................................................*
+*Br   31 :AllSV_Mass : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   13550033 bytes  File Size  =    4455614 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   3.04     *
+*............................................................................*
+*Br   32 :AllSV_N   : AllSV_N/i                                              *
+*Entries :   795666 : Total  Size=    3190327 bytes  File Size  =     470500 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   6.78     *
+*............................................................................*
+*Br   33 :AllSV_NDOF : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   13550033 bytes  File Size  =    4100423 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   3.30     *
+*............................................................................*
+*Br   34 :AllSV_NTrack : ROOT::VecOps::RVec<unsigned char>                   *
+*Entries :   795666 : Total  Size=   11782718 bytes  File Size  =    2965442 *
+*Baskets :      502 : Basket Size=      32000 bytes  Compression=   3.97     *
+*............................................................................*
+*Br   35 :AllSV_Phi : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   13549469 bytes  File Size  =    4696326 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   2.88     *
+*............................................................................*
+*Br   36 :AllSV_PointingAngle : ROOT::VecOps::RVec<float>                    *
+*Entries :   795666 : Total  Size=   13555109 bytes  File Size  =    3899831 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   3.47     *
+*............................................................................*
+*Br   37 :AllSV_Pt  : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   13548905 bytes  File Size  =    4491295 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   3.01     *
+*............................................................................*
+*Br   38 :AllSV_X   : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   13548341 bytes  File Size  =    4611336 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   2.94     *
+*............................................................................*
+*Br   39 :AllSV_Y   : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   13548341 bytes  File Size  =    4623246 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   2.93     *
+*............................................................................*
+*Br   40 :AllSV_Z   : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   13548341 bytes  File Size  =    4832561 *
+*Baskets :      560 : Basket Size=      32000 bytes  Compression=   2.80     *
+*............................................................................*
+*Br   41 :AllSoftActivityJet_Eta : ROOT::VecOps::RVec<float>                 *
+*Entries :   795666 : Total  Size=   29813639 bytes  File Size  =   14203812 *
+*Baskets :     1066 : Basket Size=      32000 bytes  Compression=   2.10     *
+*............................................................................*
+*Br   42 :AllSoftActivityJet_N : AllSoftActivityJet_N/i                      *
+*Entries :   795666 : Total  Size=    3191354 bytes  File Size  =     199345 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=  16.00     *
+*............................................................................*
+*Br   43 :AllSoftActivityJet_Phi : ROOT::VecOps::RVec<float>                 *
+*Entries :   795666 : Total  Size=   29813639 bytes  File Size  =   14287797 *
+*Baskets :     1066 : Basket Size=      32000 bytes  Compression=   2.09     *
+*............................................................................*
+*Br   44 :AllSoftActivityJet_Pt : ROOT::VecOps::RVec<float>                  *
+*Entries :   795666 : Total  Size=   29812569 bytes  File Size  =   14890695 *
+*Baskets :     1066 : Basket Size=      32000 bytes  Compression=   2.00     *
+*............................................................................*
+*Br   45 :BJet_N    : BJet_N/I                                               *
+*Entries :   795666 : Total  Size=    3195583 bytes  File Size  =     241443 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=  13.22     *
+*............................................................................*
+*Br   46 :DASNo     : DASNo/I                                                *
+*Entries :   795666 : Total  Size=    3195449 bytes  File Size  =      30065 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression= 106.19     *
+*............................................................................*
+*Br   47 :Era       : string                                                 *
+*Entries :   795666 : Total  Size=    7169149 bytes  File Size  =    1191984 *
+*Baskets :       77 : Basket Size=     732672 bytes  Compression=   6.01     *
+*............................................................................*
+*Br   48 :EventNo   : EventNo/l                                              *
+*Entries :   795666 : Total  Size=    6388973 bytes  File Size  =    3588532 *
+*Baskets :      238 : Basket Size=      32000 bytes  Compression=   1.78     *
+*............................................................................*
+*Br   49 :Event_BestMOSSF : ROOT::VecOps::RVec<float>                        *
+*Entries :   795666 : Total  Size=   11194735 bytes  File Size  =    1252713 *
+*Baskets :      483 : Basket Size=      32000 bytes  Compression=   8.93     *
+*............................................................................*
+*Br   50 :Event_BestMT : ROOT::VecOps::RVec<float>                           *
+*Entries :   795666 : Total  Size=   11193274 bytes  File Size  =    1250817 *
+*Baskets :      483 : Basket Size=      32000 bytes  Compression=   8.94     *
+*............................................................................*
+*Br   51 :Event_IsLoose : Event_IsLoose/O                                    *
+*Entries :   795666 : Total  Size=     803797 bytes  File Size  =      12232 *
+*Baskets :       75 : Basket Size=      32000 bytes  Compression=  65.56     *
+*............................................................................*
+*Br   52 :Event_IsTight : Event_IsTight/O                                    *
+*Entries :   795666 : Total  Size=     803797 bytes  File Size  =     183122 *
+*Baskets :       75 : Basket Size=      32000 bytes  Compression=   4.38     *
+*............................................................................*
+*Br   53 :Event_JetVectorSumPt : Event_JetVectorSumPt/F                      *
+*Entries :   795666 : Total  Size=    3197459 bytes  File Size  =    2871311 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   1.11     *
+*............................................................................*
+*Br   54 :Event_LightLeptonChargeSum : Event_LightLeptonChargeSum/I          *
+*Entries :   795666 : Total  Size=    3198263 bytes  File Size  =     339456 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   9.41     *
+*............................................................................*
+*Br   55 :Event_LightLeptonFakeN : Event_LightLeptonFakeN/I                  *
+*Entries :   795666 : Total  Size=    3197727 bytes  File Size  =      30150 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression= 105.96     *
+*............................................................................*
+*Br   56 :Event_LightLeptonMass : ROOT::VecOps::RVec<float>                  *
+*Entries :   795666 : Total  Size=   14392801 bytes  File Size  =    5145866 *
+*Baskets :      587 : Basket Size=      32000 bytes  Compression=   2.79     *
+*............................................................................*
+*Br   57 :Event_LightLeptonMaxJetDeepFlavorB :                               *
+*         | Event_LightLeptonMaxJetDeepFlavorB/F                             *
+*Entries :   795666 : Total  Size=    3199335 bytes  File Size  =    1956868 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   1.63     *
+*............................................................................*
+*Br   58 :Event_LightLeptonMaxMOSSF : Event_LightLeptonMaxMOSSF/F            *
+*Entries :   795666 : Total  Size=    3198129 bytes  File Size  =      33086 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=  96.57     *
+*............................................................................*
+*Br   59 :Event_LightLeptonMaxSIP3D : Event_LightLeptonMaxSIP3D/F            *
+*Entries :   795666 : Total  Size=    3198129 bytes  File Size  =    1882096 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   1.70     *
+*............................................................................*
+*Br   60 :Event_LightLeptonMinDR : ROOT::VecOps::RVec<float>                 *
+*Entries :   795666 : Total  Size=   14393392 bytes  File Size  =    5084835 *
+*Baskets :      587 : Basket Size=      32000 bytes  Compression=   2.83     *
+*............................................................................*
+*Br   61 :Event_LightLeptonMinMOSSF : Event_LightLeptonMinMOSSF/F            *
+*Entries :   795666 : Total  Size=    3198129 bytes  File Size  =      33086 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=  96.57     *
+*............................................................................*
+*Br   62 :Event_LightLeptonMinMass : ROOT::VecOps::RVec<float>               *
+*Entries :   795666 : Total  Size=   14394574 bytes  File Size  =    5141781 *
+*Baskets :      587 : Basket Size=      32000 bytes  Compression=   2.80     *
+*............................................................................*
+*Br   63 :Event_LightLeptonOSSFN : ROOT::VecOps::RVec<int>                   *
+*Entries :   795666 : Total  Size=   14393392 bytes  File Size  =    1338343 *
+*Baskets :      587 : Basket Size=      32000 bytes  Compression=  10.75     *
+*............................................................................*
+*Br   64 :Event_WZIndex : ROOT::VecOps::RVec<int>                            *
+*Entries :   795666 : Total  Size=   11193761 bytes  File Size  =    1256650 *
+*Baskets :      483 : Basket Size=      32000 bytes  Compression=   8.90     *
+*............................................................................*
+*Br   65 :Event_ZN  : ROOT::VecOps::RVec<int>                                *
+*Entries :   795666 : Total  Size=   14385118 bytes  File Size  =    1329817 *
+*Baskets :      587 : Basket Size=      32000 bytes  Compression=  10.81     *
+*............................................................................*
+*Br   66 :GenPart_Eta : ROOT::VecOps::RVec<float>                            *
+*Entries :   795666 : Total  Size=   11192787 bytes  File Size  =    1248484 *
+*Baskets :      483 : Basket Size=      32000 bytes  Compression=   8.96     *
+*............................................................................*
+*Br   67 :GenPart_Flag : ROOT::VecOps::RVec<float>                           *
+*Entries :   795666 : Total  Size=   11193274 bytes  File Size  =    1250817 *
+*Baskets :      483 : Basket Size=      32000 bytes  Compression=   8.94     *
+*............................................................................*
+*Br   68 :GenPart_MotherIndex : ROOT::VecOps::RVec<float>                    *
+*Entries :   795666 : Total  Size=   11196683 bytes  File Size  =    1251939 *
+*Baskets :      483 : Basket Size=      32000 bytes  Compression=   8.94     *
+*............................................................................*
+*Br   69 :GenPart_N : GenPart_N/I                                            *
+*Entries :   795666 : Total  Size=    3190485 bytes  File Size  =      22305 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression= 142.96     *
+*............................................................................*
+*Br   70 :GenPart_PDGId : ROOT::VecOps::RVec<float>                          *
+*Entries :   795666 : Total  Size=   11193761 bytes  File Size  =    1256650 *
+*Baskets :      483 : Basket Size=      32000 bytes  Compression=   8.90     *
+*............................................................................*
+*Br   71 :GenPart_Phi : ROOT::VecOps::RVec<float>                            *
+*Entries :   795666 : Total  Size=   11192787 bytes  File Size  =    1248484 *
+*Baskets :      483 : Basket Size=      32000 bytes  Compression=   8.96     *
+*............................................................................*
+*Br   72 :GenPart_Pt : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   11192300 bytes  File Size  =    1250796 *
+*Baskets :      483 : Basket Size=      32000 bytes  Compression=   8.94     *
+*............................................................................*
+*Br   73 :GenPart_Status : ROOT::VecOps::RVec<float>                         *
+*Entries :   795666 : Total  Size=   11194248 bytes  File Size  =    1253520 *
+*Baskets :      483 : Basket Size=      32000 bytes  Compression=   8.92     *
+*............................................................................*
+*Br   74 :GenWeight : GenWeight/I                                            *
+*Entries :   795666 : Total  Size=    3190485 bytes  File Size  =      24119 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression= 132.21     *
+*............................................................................*
+*Br   75 :HLTSingleLepton : ROOT::VecOps::RVec<int>                          *
+*Entries :   795666 : Total  Size=   14389255 bytes  File Size  =    2301583 *
+*Baskets :      587 : Basket Size=      32000 bytes  Compression=   6.25     *
+*............................................................................*
+*Br   76 :HT        : HT/F                                                   *
+*Entries :   795666 : Total  Size=    3195047 bytes  File Size  =    1573061 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   2.03     *
+*............................................................................*
+*Br   77 :Jet_DeepCSVB : ROOT::VecOps::RVec<float>                           *
+*Entries :   795666 : Total  Size=   14725737 bytes  File Size  =    5417902 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.72     *
+*............................................................................*
+*Br   78 :Jet_DeepFlavorB : ROOT::VecOps::RVec<float>                        *
+*Entries :   795666 : Total  Size=   14727537 bytes  File Size  =    5574245 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.64     *
+*............................................................................*
+*Br   79 :Jet_DeepFlavorCvB : ROOT::VecOps::RVec<float>                      *
+*Entries :   795666 : Total  Size=   14728737 bytes  File Size  =    5308226 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.77     *
+*............................................................................*
+*Br   80 :Jet_DeepFlavorCvL : ROOT::VecOps::RVec<float>                      *
+*Entries :   795666 : Total  Size=   14728737 bytes  File Size  =    5447593 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.70     *
+*............................................................................*
+*Br   81 :Jet_DeepFlavorQG : ROOT::VecOps::RVec<float>                       *
+*Entries :   795666 : Total  Size=   14728137 bytes  File Size  =    5317381 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.77     *
+*............................................................................*
+*Br   82 :Jet_Eta   : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   14722737 bytes  File Size  =    5834709 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.52     *
+*............................................................................*
+*Br   83 :Jet_HadronFlavour : ROOT::VecOps::RVec<int>                        *
+*Entries :   795666 : Total  Size=   14728737 bytes  File Size  =    2762951 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   5.33     *
+*............................................................................*
+*Br   84 :Jet_MDeepJetBSF : ROOT::VecOps::RVec<float>                        *
+*Entries :   795666 : Total  Size=   14727537 bytes  File Size  =    2757119 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   5.34     *
+*............................................................................*
+*Br   85 :Jet_MDeepJetBSFDown : ROOT::VecOps::RVec<float>                    *
+*Entries :   795666 : Total  Size=   14729937 bytes  File Size  =    2760122 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   5.33     *
+*............................................................................*
+*Br   86 :Jet_MDeepJetBSFDown2018 : ROOT::VecOps::RVec<float>                *
+*Entries :   795666 : Total  Size=   14732337 bytes  File Size  =    2762307 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   5.33     *
+*............................................................................*
+*Br   87 :Jet_MDeepJetBSFUp : ROOT::VecOps::RVec<float>                      *
+*Entries :   795666 : Total  Size=   14728737 bytes  File Size  =    2758668 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   5.33     *
+*............................................................................*
+*Br   88 :Jet_MDeepJetBSFUp2018 : ROOT::VecOps::RVec<float>                  *
+*Entries :   795666 : Total  Size=   14731137 bytes  File Size  =    2761199 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   5.33     *
+*............................................................................*
+*Br   89 :Jet_N     : Jet_N/I                                                *
+*Entries :   795666 : Total  Size=    3195449 bytes  File Size  =     539103 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   5.92     *
+*............................................................................*
+*Br   90 :Jet_POGId : ROOT::VecOps::RVec<int>                                *
+*Entries :   795666 : Total  Size=   14723937 bytes  File Size  =    2789026 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   5.27     *
+*............................................................................*
+*Br   91 :Jet_PUId  : ROOT::VecOps::RVec<int>                                *
+*Entries :   795666 : Total  Size=   14723337 bytes  File Size  =    3396963 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   4.33     *
+*............................................................................*
+*Br   92 :Jet_PUIdDisc : ROOT::VecOps::RVec<float>                           *
+*Entries :   795666 : Total  Size=   14725737 bytes  File Size  =    5058328 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.91     *
+*............................................................................*
+*Br   93 :Jet_Phi   : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   14722737 bytes  File Size  =    5828692 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.52     *
+*............................................................................*
+*Br   94 :Jet_Pt    : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   14722137 bytes  File Size  =    5404034 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.72     *
+*............................................................................*
+*Br   95 :Jet_PtSDown : ROOT::VecOps::RVec<float>                            *
+*Entries :   795666 : Total  Size=   14725137 bytes  File Size  =    5385510 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.73     *
+*............................................................................*
+*Br   96 :Jet_PtSUp : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   14723937 bytes  File Size  =    5384408 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.73     *
+*............................................................................*
+*Br   97 :Jet_QGL   : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   14722737 bytes  File Size  =    5478396 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   2.69     *
+*............................................................................*
+*Br   98 :Jet_RF    : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   14722137 bytes  File Size  =    2762688 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   5.32     *
+*............................................................................*
+*Br   99 :Jet_RFDown : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   14724537 bytes  File Size  =    2764956 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   5.32     *
+*............................................................................*
+*Br  100 :Jet_RFUp  : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   14723337 bytes  File Size  =    2763858 *
+*Baskets :      596 : Basket Size=      32000 bytes  Compression=   5.32     *
+*............................................................................*
+*Br  101 :L1PreFireWt_Dn : L1PreFireWt_Dn/F                                  *
+*Entries :   795666 : Total  Size=    3190880 bytes  File Size  =     792862 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   4.02     *
+*............................................................................*
+*Br  102 :L1PreFireWt_Nom : L1PreFireWt_Nom/F                                *
+*Entries :   795666 : Total  Size=    3190959 bytes  File Size  =     957456 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   3.33     *
+*............................................................................*
+*Br  103 :L1PreFireWt_Up : L1PreFireWt_Up/F                                  *
+*Entries :   795666 : Total  Size=    3190880 bytes  File Size  =     972633 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   3.28     *
+*............................................................................*
+*Br  104 :L1PreWt_Dn : L1PreWt_Dn/F                                          *
+*Entries :   795666 : Total  Size=    3196119 bytes  File Size  =     803484 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   3.97     *
+*............................................................................*
+*Br  105 :L1PreWt_Nom : L1PreWt_Nom/F                                        *
+*Entries :   795666 : Total  Size=    3196253 bytes  File Size  =     967671 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   3.30     *
+*............................................................................*
+*Br  106 :L1PreWt_Up : L1PreWt_Up/F                                          *
+*Entries :   795666 : Total  Size=    3196119 bytes  File Size  =     982435 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   3.25     *
+*............................................................................*
+*Br  107 :LSNo      : LSNo/i                                                 *
+*Entries :   795666 : Total  Size=    3195315 bytes  File Size  =     888333 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   3.59     *
+*............................................................................*
+*Br  108 :LT        : LT/F                                                   *
+*Entries :   795666 : Total  Size=    3195047 bytes  File Size  =    2786016 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   1.15     *
+*............................................................................*
+*Br  109 :LTMET     : LTMET/F                                                *
+*Entries :   795666 : Total  Size=    3195449 bytes  File Size  =    2823546 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   1.13     *
+*............................................................................*
+*Br  110 :LightLepton_AbsEta : ROOT::VecOps::RVec<float>                     *
+*Entries :   795666 : Total  Size=   17585392 bytes  File Size  =    6882308 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.55     *
+*............................................................................*
+*Br  111 :LightLepton_Charge : ROOT::VecOps::RVec<int>                       *
+*Entries :   795666 : Total  Size=   17585392 bytes  File Size  =    2096126 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   8.38     *
+*............................................................................*
+*Br  112 :LightLepton_DXY : ROOT::VecOps::RVec<float>                        *
+*Entries :   795666 : Total  Size=   17583319 bytes  File Size  =    6817660 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.58     *
+*............................................................................*
+*Br  113 :LightLepton_DZ : ROOT::VecOps::RVec<float>                         *
+*Entries :   795666 : Total  Size=   17582628 bytes  File Size  =    6843054 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.57     *
+*............................................................................*
+*Br  114 :LightLepton_Eta : ROOT::VecOps::RVec<float>                        *
+*Entries :   795666 : Total  Size=   17583319 bytes  File Size  =    7047783 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.49     *
+*............................................................................*
+*Br  115 :LightLepton_Flavor : ROOT::VecOps::RVec<int>                       *
+*Entries :   795666 : Total  Size=   17585392 bytes  File Size  =    1945631 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   9.03     *
+*............................................................................*
+*Br  116 :LightLepton_GenFlav : ROOT::VecOps::RVec<int>                      *
+*Entries :   795666 : Total  Size=   17586083 bytes  File Size  =    1404611 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.51     *
+*............................................................................*
+*Br  117 :LightLepton_GenPartIndex : ROOT::VecOps::RVec<int>                 *
+*Entries :   795666 : Total  Size=   17589538 bytes  File Size  =    1415999 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.41     *
+*............................................................................*
+*Br  118 :LightLepton_IDSF : ROOT::VecOps::RVec<float>                       *
+*Entries :   795666 : Total  Size=   17584010 bytes  File Size  =    1403819 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.52     *
+*............................................................................*
+*Br  119 :LightLepton_IDSFDown : ROOT::VecOps::RVec<float>                   *
+*Entries :   795666 : Total  Size=   17586774 bytes  File Size  =    1406574 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.49     *
+*............................................................................*
+*Br  120 :LightLepton_IDSFUp : ROOT::VecOps::RVec<float>                     *
+*Entries :   795666 : Total  Size=   17585392 bytes  File Size  =    1410363 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.46     *
+*............................................................................*
+*Br  121 :LightLepton_IsLoose : ROOT::VecOps::RVec<int>                      *
+*Entries :   795666 : Total  Size=   17586083 bytes  File Size  =    1405921 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.50     *
+*............................................................................*
+*Br  122 :LightLepton_IsTight : ROOT::VecOps::RVec<int>                      *
+*Entries :   795666 : Total  Size=   17586083 bytes  File Size  =    2492557 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   7.05     *
+*............................................................................*
+*Br  123 :LightLepton_IsoSF : ROOT::VecOps::RVec<float>                      *
+*Entries :   795666 : Total  Size=   17584701 bytes  File Size  =    1404414 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.51     *
+*............................................................................*
+*Br  124 :LightLepton_IsoSFDown : ROOT::VecOps::RVec<float>                  *
+*Entries :   795666 : Total  Size=   17587465 bytes  File Size  =    1409267 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.47     *
+*............................................................................*
+*Br  125 :LightLepton_IsoSFUp : ROOT::VecOps::RVec<float>                    *
+*Entries :   795666 : Total  Size=   17586083 bytes  File Size  =    1406582 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.49     *
+*............................................................................*
+*Br  126 :LightLepton_JetDeepFlavorB : ROOT::VecOps::RVec<float>             *
+*Entries :   795666 : Total  Size=   17590920 bytes  File Size  =    6548789 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.68     *
+*............................................................................*
+*Br  127 :LightLepton_JetIndex : ROOT::VecOps::RVec<int>                     *
+*Entries :   795666 : Total  Size=   17586774 bytes  File Size  =    3045622 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   5.77     *
+*............................................................................*
+*Br  128 :LightLepton_JetPtRatio : ROOT::VecOps::RVec<float>                 *
+*Entries :   795666 : Total  Size=   17588156 bytes  File Size  =    7900905 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.22     *
+*............................................................................*
+*Br  129 :LightLepton_JetPtRel : ROOT::VecOps::RVec<float>                   *
+*Entries :   795666 : Total  Size=   17586774 bytes  File Size  =    6116382 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.87     *
+*............................................................................*
+*Br  130 :LightLepton_JetRelIso : ROOT::VecOps::RVec<float>                  *
+*Entries :   795666 : Total  Size=   17587465 bytes  File Size  =    6168478 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.85     *
+*............................................................................*
+*Br  131 :LightLepton_MT : ROOT::VecOps::RVec<float>                         *
+*Entries :   795666 : Total  Size=   17582628 bytes  File Size  =    8419114 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.09     *
+*............................................................................*
+*Br  132 :LightLepton_MinDR : ROOT::VecOps::RVec<float>                      *
+*Entries :   795666 : Total  Size=   17584701 bytes  File Size  =    6041657 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.91     *
+*............................................................................*
+*Br  133 :LightLepton_MuonN : LightLepton_MuonN/I                            *
+*Entries :   795666 : Total  Size=    3197057 bytes  File Size  =     258079 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  134 :LightLepton_N : LightLepton_N/I                                    *
+*Entries :   795666 : Total  Size=    3196521 bytes  File Size  =      31007 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression= 103.00     *
+*............................................................................*
+*Br  135 :LightLepton_PFRelIso : ROOT::VecOps::RVec<float>                   *
+*Entries :   795666 : Total  Size=   17586774 bytes  File Size  =    7496966 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.34     *
+*............................................................................*
+*Br  136 :LightLepton_POGIdBit : ROOT::VecOps::RVec<int>                     *
+*Entries :   795666 : Total  Size=   17586774 bytes  File Size  =    4480168 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   3.92     *
+*............................................................................*
+*Br  137 :LightLepton_Phi : ROOT::VecOps::RVec<float>                        *
+*Entries :   795666 : Total  Size=   17583319 bytes  File Size  =    7099831 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.47     *
+*............................................................................*
+*Br  138 :LightLepton_Pt : ROOT::VecOps::RVec<float>                         *
+*Entries :   795666 : Total  Size=   17582628 bytes  File Size  =    8247517 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.13     *
+*............................................................................*
+*Br  139 :LightLepton_PtRDown : ROOT::VecOps::RVec<float>                    *
+*Entries :   795666 : Total  Size=   17586083 bytes  File Size  =    8260082 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.13     *
+*............................................................................*
+*Br  140 :LightLepton_PtRUp : ROOT::VecOps::RVec<float>                      *
+*Entries :   795666 : Total  Size=   17584701 bytes  File Size  =    8251393 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.13     *
+*............................................................................*
+*Br  141 :LightLepton_PtSDown : ROOT::VecOps::RVec<float>                    *
+*Entries :   795666 : Total  Size=   17586083 bytes  File Size  =    8260082 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.13     *
+*............................................................................*
+*Br  142 :LightLepton_PtSUp : ROOT::VecOps::RVec<float>                      *
+*Entries :   795666 : Total  Size=   17584701 bytes  File Size  =    8251393 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.13     *
+*............................................................................*
+*Br  143 :LightLepton_RecoSF : ROOT::VecOps::RVec<float>                     *
+*Entries :   795666 : Total  Size=   17585392 bytes  File Size  =    1410363 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.46     *
+*............................................................................*
+*Br  144 :LightLepton_RecoSFDown : ROOT::VecOps::RVec<float>                 *
+*Entries :   795666 : Total  Size=   17588156 bytes  File Size  =    1409311 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.47     *
+*............................................................................*
+*Br  145 :LightLepton_RecoSFUp : ROOT::VecOps::RVec<float>                   *
+*Entries :   795666 : Total  Size=   17586774 bytes  File Size  =    1406574 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=  12.49     *
+*............................................................................*
+*Br  146 :LightLepton_SAJetPtRatio : ROOT::VecOps::RVec<float>               *
+*Entries :   795666 : Total  Size=   17589538 bytes  File Size  =    7946209 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.21     *
+*............................................................................*
+*Br  147 :LightLepton_SIP3D : ROOT::VecOps::RVec<float>                      *
+*Entries :   795666 : Total  Size=   17584701 bytes  File Size  =    6462077 *
+*Baskets :      687 : Basket Size=      32000 bytes  Compression=   2.72     *
+*............................................................................*
+*Br  148 :LumiSection : LumiSection/i                                        *
+*Entries :   795666 : Total  Size=    3190643 bytes  File Size  =     884813 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   3.60     *
+*............................................................................*
+*Br  149 :MET       : MET/F                                                  *
+*Entries :   795666 : Total  Size=    3195181 bytes  File Size  =    2875522 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   1.11     *
+*............................................................................*
+*Br  150 :METFilter : ROOT::VecOps::RVec<int>                                *
+*Entries :   795666 : Total  Size=   14385709 bytes  File Size  =    1333401 *
+*Baskets :      587 : Basket Size=      32000 bytes  Compression=  10.78     *
+*............................................................................*
+*Br  151 :METFilter_pRECO : ROOT::VecOps::RVec<int>                          *
+*Entries :   795666 : Total  Size=   14389255 bytes  File Size  =    1337628 *
+*Baskets :      587 : Basket Size=      32000 bytes  Compression=  10.75     *
+*............................................................................*
+*Br  152 :PU_N      : PU_N/I                                                 *
+*Entries :   795666 : Total  Size=    3190090 bytes  File Size  =      21930 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression= 145.38     *
+*............................................................................*
+*Br  153 :PU_TrueN  : PU_TrueN/I                                             *
+*Entries :   795666 : Total  Size=    3190406 bytes  File Size  =      22230 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression= 143.44     *
+*............................................................................*
+*Br  154 :PV_AllN   : PV_AllN/I                                              *
+*Entries :   795666 : Total  Size=    3190327 bytes  File Size  =     908642 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   3.51     *
+*............................................................................*
+*Br  155 :PV_Chi2   : PV_Chi2/F                                              *
+*Entries :   795666 : Total  Size=    3190327 bytes  File Size  =    1376744 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   2.32     *
+*............................................................................*
+*Br  156 :PV_GoodN  : PV_GoodN/I                                             *
+*Entries :   795666 : Total  Size=    3190406 bytes  File Size  =     877400 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   3.63     *
+*............................................................................*
+*Br  157 :PV_Ndof   : PV_Ndof/F                                              *
+*Entries :   795666 : Total  Size=    3190327 bytes  File Size  =    1623770 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.96     *
+*............................................................................*
+*Br  158 :PV_SumPt2 : PV_SumPt2/F                                            *
+*Entries :   795666 : Total  Size=    3190485 bytes  File Size  =    1704975 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.87     *
+*............................................................................*
+*Br  159 :PV_X      : PV_X/F                                                 *
+*Entries :   795666 : Total  Size=    3190090 bytes  File Size  =    1299346 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   2.45     *
+*............................................................................*
+*Br  160 :PV_Y      : PV_Y/F                                                 *
+*Entries :   795666 : Total  Size=    3190090 bytes  File Size  =    1366384 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   2.33     *
+*............................................................................*
+*Br  161 :PV_Z      : PV_Z/F                                                 *
+*Entries :   795666 : Total  Size=    3190090 bytes  File Size  =    2531610 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.26     *
+*............................................................................*
+*Br  162 :PassLumiJsonFilter : PassLumiJsonFilter/I                          *
+*Entries :   795666 : Total  Size=    3197191 bytes  File Size  =      42081 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=  75.91     *
+*............................................................................*
+*Br  163 :PuppiMET_Phi : PuppiMET_Phi/F                                      *
+*Entries :   795666 : Total  Size=    3190722 bytes  File Size  =    2194798 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.45     *
+*............................................................................*
+*Br  164 :PuppiMET_PhiJESDown : PuppiMET_PhiJESDown/F                        *
+*Entries :   795666 : Total  Size=    3191275 bytes  File Size  =    2020105 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.58     *
+*............................................................................*
+*Br  165 :PuppiMET_PhiJESUp : PuppiMET_PhiJESUp/F                            *
+*Entries :   795666 : Total  Size=    3191117 bytes  File Size  =    2020016 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.58     *
+*............................................................................*
+*Br  166 :PuppiMET_PhiUnclusteredDown : PuppiMET_PhiUnclusteredDown/F        *
+*Entries :   795666 : Total  Size=    3191907 bytes  File Size  =    2018361 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.58     *
+*............................................................................*
+*Br  167 :PuppiMET_PhiUnclusteredUp : PuppiMET_PhiUnclusteredUp/F            *
+*Entries :   795666 : Total  Size=    3191749 bytes  File Size  =    2022312 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.58     *
+*............................................................................*
+*Br  168 :PuppiMET_Pt : PuppiMET_Pt/F                                        *
+*Entries :   795666 : Total  Size=    3190643 bytes  File Size  =    2873244 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.11     *
+*............................................................................*
+*Br  169 :PuppiMET_PtJESDown : PuppiMET_PtJESDown/F                          *
+*Entries :   795666 : Total  Size=    3191196 bytes  File Size  =    1920084 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.66     *
+*............................................................................*
+*Br  170 :PuppiMET_PtJESUp : PuppiMET_PtJESUp/F                              *
+*Entries :   795666 : Total  Size=    3191038 bytes  File Size  =    1920428 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.66     *
+*............................................................................*
+*Br  171 :PuppiMET_PtUnclusteredDown : PuppiMET_PtUnclusteredDown/F          *
+*Entries :   795666 : Total  Size=    3191828 bytes  File Size  =    1918868 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.66     *
+*............................................................................*
+*Br  172 :PuppiMET_PtUnclusteredUp : PuppiMET_PtUnclusteredUp/F              *
+*Entries :   795666 : Total  Size=    3191670 bytes  File Size  =    1918951 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   1.66     *
+*............................................................................*
+*Br  173 :RunNo     : RunNo/i                                                *
+*Entries :   795666 : Total  Size=    3195449 bytes  File Size  =      83349 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=  38.30     *
+*............................................................................*
+*Br  174 :ST        : ST/F                                                   *
+*Entries :   795666 : Total  Size=    3195047 bytes  File Size  =    2850244 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=   1.12     *
+*............................................................................*
+*Br  175 :Tau_Charge : ROOT::VecOps::RVec<int>                               *
+*Entries :   795666 : Total  Size=   11312844 bytes  File Size  =    1591970 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   7.10     *
+*............................................................................*
+*Br  176 :Tau_DXY   : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   11311371 bytes  File Size  =    1717494 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.58     *
+*............................................................................*
+*Br  177 :Tau_DZ    : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   11310880 bytes  File Size  =    1746513 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.47     *
+*............................................................................*
+*Br  178 :Tau_DecayMode : ROOT::VecOps::RVec<int>                            *
+*Entries :   795666 : Total  Size=   11314317 bytes  File Size  =    1630383 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.93     *
+*............................................................................*
+*Br  179 :Tau_DeepTau2017v2p1VSe : ROOT::VecOps::RVec<int>                   *
+*Entries :   795666 : Total  Size=   11318736 bytes  File Size  =    1649036 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.86     *
+*............................................................................*
+*Br  180 :Tau_DeepTau2017v2p1VSjet : ROOT::VecOps::RVec<int>                 *
+*Entries :   795666 : Total  Size=   11319718 bytes  File Size  =    1646847 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.87     *
+*............................................................................*
+*Br  181 :Tau_DeepTau2017v2p1VSmu : ROOT::VecOps::RVec<int>                  *
+*Entries :   795666 : Total  Size=   11319227 bytes  File Size  =    1577752 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   7.17     *
+*............................................................................*
+*Br  182 :Tau_Eta   : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   11311371 bytes  File Size  =    1717491 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.58     *
+*............................................................................*
+*Br  183 :Tau_Flavor : ROOT::VecOps::RVec<int>                               *
+*Entries :   795666 : Total  Size=   11312844 bytes  File Size  =    1577103 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   7.17     *
+*............................................................................*
+*Br  184 :Tau_GenFlav : ROOT::VecOps::RVec<int>                              *
+*Entries :   795666 : Total  Size=   11313335 bytes  File Size  =    1564829 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   7.22     *
+*............................................................................*
+*Br  185 :Tau_GenPartIndex : ROOT::VecOps::RVec<int>                         *
+*Entries :   795666 : Total  Size=   11315790 bytes  File Size  =    1579756 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   7.16     *
+*............................................................................*
+*Br  186 :Tau_JetDeepFlavorB : ROOT::VecOps::RVec<float>                     *
+*Entries :   795666 : Total  Size=   11316772 bytes  File Size  =    1723244 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.56     *
+*............................................................................*
+*Br  187 :Tau_JetIndex : ROOT::VecOps::RVec<int>                             *
+*Entries :   795666 : Total  Size=   11313826 bytes  File Size  =    1649350 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.85     *
+*............................................................................*
+*Br  188 :Tau_JetPtRatio : ROOT::VecOps::RVec<float>                         *
+*Entries :   795666 : Total  Size=   11314808 bytes  File Size  =    1752857 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.45     *
+*............................................................................*
+*Br  189 :Tau_N     : Tau_N/I                                                *
+*Entries :   795666 : Total  Size=    3195449 bytes  File Size  =     115117 *
+*Baskets :      130 : Basket Size=      32000 bytes  Compression=  27.73     *
+*............................................................................*
+*Br  190 :Tau_Phi   : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   11311371 bytes  File Size  =    1717637 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.58     *
+*............................................................................*
+*Br  191 :Tau_Pt    : ROOT::VecOps::RVec<float>                              *
+*Entries :   795666 : Total  Size=   11310880 bytes  File Size  =    1762017 *
+*Baskets :      487 : Basket Size=      32000 bytes  Compression=   6.41     *
+*............................................................................*
+*Br  192 :TrigObj_Eta : ROOT::VecOps::RVec<float>                            *
+*Entries :   795666 : Total  Size=   16676245 bytes  File Size  =    6972863 *
+*Baskets :      656 : Basket Size=      32000 bytes  Compression=   2.39     *
+*............................................................................*
+*Br  193 :TrigObj_FilterBit : ROOT::VecOps::RVec<int>                        *
+*Entries :   795666 : Total  Size=   16680205 bytes  File Size  =    4696587 *
+*Baskets :      656 : Basket Size=      32000 bytes  Compression=   3.55     *
+*............................................................................*
+*Br  194 :TrigObj_Id : ROOT::VecOps::RVec<int>                               *
+*Entries :   795666 : Total  Size=   16675585 bytes  File Size  =    2907153 *
+*Baskets :      656 : Basket Size=      32000 bytes  Compression=   5.73     *
+*............................................................................*
+*Br  195 :TrigObj_N : TrigObj_N/I                                            *
+*Entries :   795666 : Total  Size=    3190485 bytes  File Size  =     414281 *
+*Baskets :       75 : Basket Size=     172544 bytes  Compression=   7.70     *
+*............................................................................*
+*Br  196 :TrigObj_Phi : ROOT::VecOps::RVec<float>                            *
+*Entries :   795666 : Total  Size=   16676245 bytes  File Size  =    6997989 *
+*Baskets :      656 : Basket Size=      32000 bytes  Compression=   2.38     *
+*............................................................................*
+*Br  197 :TrigObj_Pt : ROOT::VecOps::RVec<float>                             *
+*Entries :   795666 : Total  Size=   16675585 bytes  File Size  =    6851626 *
+*Baskets :      656 : Basket Size=      32000 bytes  Compression=   2.43     *
+*............................................................................*
+*Br  198 :XSec      : XSec/D                                                 *
+*Entries :   795666 : Total  Size=    6372857 bytes  File Size  =      43089 *
+*Baskets :       76 : Basket Size=     345088 bytes  Compression= 147.86     *
+*............................................................................*
+*Br  199 :XSecNormWeight : XSecNormWeight/D                                  *
+*Entries :   795666 : Total  Size=    6390667 bytes  File Size  =      64985 *
+*Baskets :      238 : Basket Size=      32000 bytes  Compression=  98.26     *
+*............................................................................*
+[0mroot [3] .>
+[0m
